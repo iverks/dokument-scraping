@@ -1,0 +1,9 @@
+wheel
+beautifulsoup4
+wordcloud
+docx2txt
+unidecode
+pandas
+openpyxl
+requests
+pdfplumber

@@ -1,0 +1,5 @@
+config.py
+__pycache__
+documents/*
+results/*
+link_cache.pickle
