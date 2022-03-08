@@ -143,10 +143,10 @@ def add_text_to_counter(text: str, counter: Counter):
     counter += frequencies  
 
 def counter_to_wordcloud(counter: Counter, filename: str):
-    wordcloud = WordCloud(width=1920, height=1080, colormap=colormap).generate_from_frequencies(counter)
+    wordcloud = WordCloud(width=1920, height=1080, colormap=colormap, mode="RGBA", background_color=None).generate_from_frequencies(counter)
     wordcloud.to_file(filename)
 
-def save_to_pickle(object, pickle_file):
+def save_to_pickle(object, pickle_file):    
     with open(pickle_file, "wb") as file:
         pickle.dump(object, file)
 
@@ -155,7 +155,7 @@ def get_from_pickle(pickle_file):
         obj = pickle.load(file)
     return obj
 
-colormap: clr.ListedColormap = clr.ListedColormap(["#df6024", "#f28a21", "#f8d164", "#88ba98", "#f0edc9"])
+colormap: clr.ListedColormap = clr.ListedColormap(["#df6024ff", "#f28a21ff", "#f8d164ff", "#88ba98ff", "#f0edc9ff"])
 
 if __name__ == "__main__":
     pickle_file = pathlib.Path("./link_cache.pickle").resolve()
